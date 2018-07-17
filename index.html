@@ -12,6 +12,72 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Inventory Management System</h1>
+      <nav class="navbar navbar-dark bg-primary">
+        <div class="container">
+          <p id='menu-title'>The Inventory Management System</p>
+          <button type="button" class="btn btn-primary menu view1" data-toggle="modal" data-target="#signUpModal">
+          Sign Up
+          </button>
+          <button type="button" class="btn btn-primary menu view1"  data-toggle="modal" data-target="#signInModal">
+          Sign In
+          </button>
+          <button type="button" class="btn btn-primary menu view2" data-toggle="modal" data-target="#changePasswordModal">
+          Change Password
+          </button>
+          <button type="button" id='sign-out' class="btn btn-primary menu view2" data-toggle="modal" data-target="#signOutModal">
+          Sign Out
+          </button>
+        </div>
+      </nav>
+
+      <div class="row article settings1 view2">
+        <div class="row article settings2">
+          <div class='col-md-1 box'></div>
+          <div class='col-md-2 box'><h3>User Profile</h3></div>
+          <div class='col-md-7 box'></div>
+          <div class='col-md-1 box'>
+            <button type="button" class="btn btn-primary content-button" data-toggle="modal" data-target="#userModal">Update</button>
+          </div>
+          <div class='col-md-1 box'></div>
+        </div>
+        <div class="row article settings3">
+          <div class='col-md-1 box'></div>
+          <div class='col-md-8 box'>
+            <ul>
+              <li id="userName">Name:</li>
+              <li id="userEmail">Email:</li>
+              <li id="companyName">Team Name:</li>
+            </ul>
+          </div>
+          <div class='col-md-3 box'></div>
+        </div>
+      </div>
+
+      <div class="row article settings1 view2">
+        <div class="row article settings2">
+          <div class='col-md-1 box'></div>
+          <div class='col-md-2 box'><h3>Item Inventory</h3></div>
+          <div class='col-md-7 box'></div>
+          <div class='col-md-1 box'>
+            <button type="button" class="btn btn-primary content-button" data-toggle="modal" data-target="#itemModal">Create Item</button>
+          </div>
+          <div class='col-md-1 box'></div>
+        </div>
+        <div class="row article settings3">
+          <div class='col-md-1 box'></div>
+          <div class='col-md-8 box'>
+            <ul id='inventoryList'>
+              <li>Paper</li>
+              <li>Pen</li>
+              <li>Stapler</li>
+            </ul>
+          </div>
+          <div class='col-md-3 box'></div>
+        </div>
+      </div>
+
+      <footer>
+        <p>Created by Team-Zero-Errors</p>
+      </footer>
     </body>
 </html>

@@ -6,9 +6,10 @@ const showItemsTemplate = require('../templates/item-listing.handlebars')
 const createItemSuccess = function (data) {
   store.item = data.item
   console.log('data is ', data)
-  console.log('data.items is', data.item)
+  console.log('data.item is', data.item)
+  console.log('data.item.name is', data.item.name)
   console.log('showNewItemsHtml')
-  const showNewItemsHtml = showItemsTemplate({ posts: data.items })
+  const showNewItemsHtml = showItemsTemplate({ items: data.item })
   $('#inventoryList').html(showNewItemsHtml)
 }
 const createItemError = function () {

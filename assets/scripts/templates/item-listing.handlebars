@@ -1,17 +1,9 @@
 {{#each items as |item|}}
-<ul> data-id="{{item.id}}">
 
-
-  <li h1 data-id="{{item.id}}"> <small>Item: {{item.name}}</small></h1></li>
 <div>
+  <ul>
 <li>
-  {{item.name}}
-</li>
-<li>
-  {{item.quantity}}
-</li>
-<li>
-  {{item.price }}
+  {{item.name}} <br>  test quantity {{item.quantity}} <br> test price{{item.price }}
 </li>
 </ul>
 
@@ -60,4 +52,4 @@
 
 </form> <br>
 
-  {{/each}}
+{{/each}}

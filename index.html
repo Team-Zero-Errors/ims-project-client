@@ -76,6 +76,122 @@
         </div>
       </div>
 
+
+      <div class="modal fade" id="signOutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="signOutModalLabel">Sign Out</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              <h4 id='sign-out-text'></h4>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="changePasswordModalLabel">Change Password</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              <form id='change-password-form'>
+                <div class="form-group">
+                  <label for="changePasswordInputPassword1">Old Password</label>
+                  <input name='passwords[old]' type="password" class="form-control" id="changePasswordInputPasswordOld" placeholder="Old Password">
+                </div>
+                <div class="form-group">
+                  <label for="signUpInputPasswordConfirmation1">New Password</label>
+                  <input name='passwords[new]' type="password" class="form-control" id="changePasswordInputNew" placeholder="New Password">
+                </div>
+                <button type='submit'>Change Password</button>
+              </form>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              <form id='sign-up-form'>
+                <div class="form-group">
+                  <label for="signUpInputEmail1">Email Address</label>
+                  <input name='credentials[email]' type="email" class="form-control" id="signUpInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <label for="signUpInputPassword1">Password</label>
+                  <input name='credentials[password]' type="password" class="form-control" id="SignUpInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <label for="signUpInputPasswordConfirmation1">Password Confirmation</label>
+                  <input name='credentials[password_confirmation]' type="password" class="form-control" id="SignUpInputPasswordConfirmation1" placeholder="Password Confirmation">
+                </div>
+                <button type='submit'>Sign-Up</button>
+              </form>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              <form id='sign-in-form'>
+                <div class="form-group">
+                  <label for="signInInputEmail1">Email Address</label>
+                  <input name='credentials[email]' type="email" class="form-control" id="signInInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <label for="signInInputPassword1">Password</label>
+                  <input name='credentials[password]' type="password" class="form-control" id="SignInInputPassword1" placeholder="Password">
+                </div>
+                <button type='submit'>Sign-In</button>
+              </form>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" id="close-sign-up" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <footer>
         <p>Created by Team-Zero-Errors</p>
       </footer>

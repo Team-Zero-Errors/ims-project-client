@@ -8,7 +8,6 @@ const createItemSuccess = function (data) {
   console.log('data is ', data)
   console.log('data.item is', data.item)
   console.log('data.item.name is', data.item.name)
-  console.log('showNewItemsHtml')
   const showNewItemsHtml = showItemsTemplate({ items: data.item })
   $('#inventoryList').html(showNewItemsHtml)
 }

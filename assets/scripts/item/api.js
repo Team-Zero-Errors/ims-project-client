@@ -24,7 +24,18 @@ const getItems = function (data) {
   })
 }
 
+const deleteItem = function (itemId) {
+  return $.ajax({
+    method: 'DELETE',
+    url: config.apiUrl + '/items/' + itemId,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   createItem,
-  getItems
+  getItems,
+  deleteItem
 }

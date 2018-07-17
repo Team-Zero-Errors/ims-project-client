@@ -23,9 +23,19 @@ const getItemsSuccess = (data) => {
 
 const getItemsFailure = function () {
 }
+
+const deleteItemSuccess = function () {
+
+}
+const deleteItemError = function () {
+// need to indicate error if error occurs
+}
+
 module.exports = {
   createItemSuccess,
   createItemError,
+  deleteItemSuccess,
+  deleteItemError,
   getItemsSuccess,
   getItemsFailure
 }

@@ -17,7 +17,18 @@ const onGetItems = () => {
     .then(itemUi.getItemsSuccess)
     .catch(itemUi.getItemsFailure)
 }
+
+const onDeleteItem = function (event) {
+  event.preventDefault()
+  const itemId = $(event.target).attr('data-id')
+  itemApi.deleteItem(itemId)
+    .then(itemUi.deleteItemSuccess)
+    .then(onGetItems)
+    .catch(itemUi.deleteItemError)
+}
+
 module.exports = {
   onCreateItem,
+  onDeleteItem,
   onGetItems
 }

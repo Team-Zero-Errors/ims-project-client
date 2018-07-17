@@ -12,7 +12,12 @@ const onCreateItem = function (event) {
     .then(itemUi.createItemSuccess)
     .catch(itemUi.createItemError)
 }
-
+const onGetItems = () => {
+  itemApi.getItems()
+    .then(itemUi.getItemsSuccess)
+    .catch(itemUi.getItemsFailure)
+}
 module.exports = {
-  onCreateItem
+  onCreateItem,
+  onGetItems
 }

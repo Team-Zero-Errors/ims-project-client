@@ -14,6 +14,17 @@ const createItem = function (data) {
   })
 }
 
+const getItems = function (data) {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/items',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
-  createItem
+  createItem,
+  getItems
 }

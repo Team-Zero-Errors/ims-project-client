@@ -15,7 +15,17 @@ const createItemError = function () {
   $('#createModalLabel').html('Something went wrong try again!')
 }
 
+const getItemsSuccess = (data) => {
+  console.log('data is ', data)
+  const showNewItemsHtml = showItemsTemplate({ items: data.items })
+  $('#inventoryList').html(showNewItemsHtml)
+}
+
+const getItemsFailure = function () {
+}
 module.exports = {
   createItemSuccess,
-  createItemError
+  createItemError,
+  getItemsSuccess,
+  getItemsFailure
 }

@@ -1,19 +1,15 @@
 {{#each items as |item|}}
 
-<div>
-  <ul>
-<li>
-  {{item.name}} <br>  test quantity {{item.quantity}} <br> test price{{item.price }}
-</li>
+<ul class="list-group">
+  <li class="list-group-item">Item Name: {{item.name}}</li>
+  <li class="list-group-item">Quantity: {{item.quantity}}</li>
+  <li class="list-group-item">Price: {{item.price }}</li>
+  <li class="list-group-item"><button type="button"  class="update-trigger-button btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Update Item  </button>
+    <button type="button" data-id="{{item.id}}" class="deleteButton btn btn-primary">Delete Item</button></li>
 </ul>
-
-</div>
 <!--  Update Modal Starts Here -->
     <form class="update-form">
-      <button type="button"  class="update-trigger-button btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Update Item
-      </button>
-
       <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -46,10 +42,8 @@
           </div>
         </div>
 </form>
-</div> <br><br>
-<!-- Delete Post  -->
-  <button type="button" data-id="{{item.id}}" class="deleteButton btn btn-primary">Delete Item</button>
+</div> <br>
 
-</form> <br>
+</form> <br><br>
 
 {{/each}}

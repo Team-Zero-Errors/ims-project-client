@@ -1,2 +1,67 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+footer {
+  background-color: grey;
+  bottom: 0;
+  color: white;
+  height: 20px;
+  left: 0;
+  margin-top: 10px;
+  opacity: 0.9;
+  padding-top: 1px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+h3 {
+  color: #dfdfdf;
+}
+
+.navbar {
+  opacity: 0.9;
+}
+
+.view2 {
+  display: none;
+}
+
+.menu {
+  background-color: grey;
+  border: 1px solid white;
+  color: white;
+  float: right;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.content-button {
+  background-color: grey;
+  border: 1px solid white;
+  color: white;
+  float: right;
+  margin-left: 5px;
+  margin-top: 15px;
+}
+
+.settings1 {
+  background-color: #4e4e4e;
+  border: 5px solid grey;
+  margin-bottom: 30px;
+  margin-left: 5%;
+  width: 90%;
+}
+
+.settings2 {
+  background-color: #4e4e4e;
+}
+
+.settings3 {
+  background-color: #dfdfdf;
+}
+
+#menu-title {
+  display: inline;
+  font-size: 40px;
+}

@@ -17,8 +17,10 @@ $(() => {
 
   // Item Events
   $('#create-item-form').on('submit', itemEvents.onCreateItem)
-  $('.deleteButton').on('click', itemEvents.onDeleteItem)
-  $('.update-submit-button').on('submit', itemEvents.onUpdateItem)
+
+  itemEvents.addHandlers()
+  // $('.deleteButton').on('click', itemEvents.onDeleteItem)
+  // $('.update-submit-button').on('submit', itemEvents.onUpdateItem)
   // $('#show-posts').on('click', '.deleteButton', onDeletePost)
   // $('#show-posts').on('submit', '.update-form', onUpdatePost)
   // $('#create-post-form').on('submit', onNewPost)

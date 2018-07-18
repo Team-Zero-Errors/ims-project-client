@@ -1,34 +1,42 @@
 'use strict'
-const store = require('../store')
+// const store = require('../store')
 
 const showItemsTemplate = require('../templates/item-listing.handlebars')
 
 const createItemSuccess = function (data) {
-  store.item = data.item
-  console.log('data is ', data)
-  console.log('data.item is', data.item)
-  console.log('data.item.name is', data.item.name)
-  const showNewItemsHtml = showItemsTemplate({ items: data.item })
-  $('#inventoryList').html(showNewItemsHtml)
+  $('#createItemModal').modal('hide')
+  $('#create-item-form')[0].reset()
 }
+
 const createItemError = function () {
   $('#createModalLabel').html('Something went wrong try again!')
 }
 
 const getItemsSuccess = (data) => {
-  console.log('data is ', data)
   const showNewItemsHtml = showItemsTemplate({ items: data.items })
   $('#inventoryList').html(showNewItemsHtml)
+  console.log('you have succesfully loaded inventory')
 }
 
-const getItemsFailure = function () {
+const getItemsFailure = function (error) {
+  console.log('Get Items Error', error)
 }
 
 const deleteItemSuccess = function () {
-
+  console.log('you have succesfully deleted an item!')
 }
-const deleteItemError = function () {
-// need to indicate error if error occurs
+const deleteItemError = function (error) {
+  console.log('Delete Item Error', error)
+}
+
+const updateItemSuccess = function () {
+  // $('.updateModal').modal('hide')
+  // $('#updateModal-backdrop').remove()
+  // $('.update-form')[0].reset()
+  console.log('you have succesfully updated an item!')
+}
+const updateItemError = function (error) {
+  console.log('Update Item Error', error)
 }
 
 module.exports = {
@@ -37,5 +45,7 @@ module.exports = {
   deleteItemSuccess,
   deleteItemError,
   getItemsSuccess,
-  getItemsFailure
+  getItemsFailure,
+  updateItemError,
+  updateItemSuccess
 }

@@ -6,10 +6,9 @@ const itemApi = require('./api.js')
 const onCreateItem = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log('data.item is ', data.item)
-  console.log('event.target is ', event.target)
   itemApi.createItem(data)
     .then(itemUi.createItemSuccess)
+    .then(onGetItems)
     .catch(itemUi.createItemError)
 }
 const onGetItems = () => {

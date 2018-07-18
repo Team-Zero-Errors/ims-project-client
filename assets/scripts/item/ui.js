@@ -37,9 +37,8 @@ const deleteItemError = function (error) {
 }
 
 const updateItemSuccess = function () {
-  // $('.updateModal').modal('hide')
-  // $('#updateModal-backdrop').remove()
-  // $('.update-form')[0].reset()
+  $('.updateModal').modal('hide')
+  $('.update-form')[0].reset()
   console.log('you have succesfully updated an item!')
 }
 const updateItemError = function (error) {

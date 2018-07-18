@@ -12,7 +12,6 @@ const createItemError = function () {
 }
 
 const getItemsSuccess = (data) => {
-  console.log('data is ', data)
   const showNewItemsHtml = showItemsTemplate({ items: data.items })
   $('#inventoryList').html(showNewItemsHtml)
 }
@@ -21,10 +20,10 @@ const getItemsFailure = function () {
 }
 
 const deleteItemSuccess = function () {
-
+  console.log('you have succesfully deleted an item!')
 }
-const deleteItemError = function () {
-// need to indicate error if error occurs
+const deleteItemError = function (error) {
+  console.log('you have an error', error)
 }
 
 module.exports = {

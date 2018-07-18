@@ -9,6 +9,7 @@ const onCreateItem = function (event) {
   itemApi.createItem(data)
     .then(itemUi.createItemSuccess)
     .then(onGetItems)
+    // .then(addHandlers)
     .catch(itemUi.createItemError)
 }
 const onGetItems = () => {
@@ -26,8 +27,22 @@ const onDeleteItem = function (event) {
     .catch(itemUi.deleteItemError)
 }
 
+const onUpdateItem = function (event) {
+  event.preventDefault()
+  console.log('Update!!!!!')
+  console.log('update.event is: ', event)
+  const data = $(event.target).attr('data-id')
+  console.log('update.data is: ', data)
+}
+
+const addHandlers = () => {
+  $('#inventoryList').on('click', '.deleteButton', onDeleteItem)
+  $('#inventoryList').on('click', '.updateSubmitButton', onUpdateItem)
+}
+
 module.exports = {
   onCreateItem,
   onDeleteItem,
-  onGetItems
+  onGetItems,
+  addHandlers
 }

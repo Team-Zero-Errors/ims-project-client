@@ -5,17 +5,17 @@
   <li class="list-group-item">Quantity: {{item.quantity}}</li>
   <li class="list-group-item">Price: {{item.price }}</li>
   <li class="list-group-item">
-    <button type="button"  class="updateButton btn btn-primary" data-toggle="modal" data-target="#updateItemModal">Update Item</button>
+    <button type="button" data-id="{{item._id}}" class="updateButton btn btn-primary">Update Item</button>
     <button type="button" data-id="{{item._id}}" class="deleteButton btn btn-primary">Delete Item</button>
   </li>
 </ul>
 <!--  Update Modal Starts Here -->
-      <!-- Modal -->
-      <div class="modal fade updateModal" id="updateItemModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <!-- Modal id="updateItemModal" -->
+      <div class="modal fade updateModal" data-id="modal{{item._id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="updateModalLabel">Update Item</h5>
+              <h5 class="modal-title">Update Item</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -35,8 +35,8 @@
                   <input name ="item[price]" value="{{item.price}}" data-id="{{item._id}}" type="text" class="form-control">
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   <button type="submit" data-id="{{item._id}}"  class="updateSubmitButton btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
               </form>
             </div>

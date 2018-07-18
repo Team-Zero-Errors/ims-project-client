@@ -1,5 +1,5 @@
 'use strict'
-// const store = require('../store')
+ const store = require('../store')
 
 const showItemsTemplate = require('../templates/item-listing.handlebars')
 
@@ -13,7 +13,14 @@ const createItemError = function () {
 }
 
 const getItemsSuccess = (data) => {
-  const showNewItemsHtml = showItemsTemplate({ items: data.items })
+  const yourItems = data.items.filter((data) => {
+    if (data.owner === store.user._id) {
+      return data
+    }
+  })
+  console.log('data is ', data)
+  console.log('yourItems:', yourItems)
+  const showNewItemsHtml = showItemsTemplate({ items: yourItems })
   $('#inventoryList').html(showNewItemsHtml)
   console.log('you have succesfully loaded inventory')
 }

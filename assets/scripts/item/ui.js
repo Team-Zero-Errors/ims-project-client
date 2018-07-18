@@ -1,5 +1,5 @@
 'use strict'
- const store = require('../store')
+const store = require('../store')
 
 const showItemsTemplate = require('../templates/item-listing.handlebars')
 
@@ -18,8 +18,6 @@ const getItemsSuccess = (data) => {
       return data
     }
   })
-  console.log('data is ', data)
-  console.log('yourItems:', yourItems)
   const showNewItemsHtml = showItemsTemplate({ items: yourItems })
   $('#inventoryList').html(showNewItemsHtml)
   console.log('you have succesfully loaded inventory')
@@ -36,9 +34,11 @@ const deleteItemError = function (error) {
   console.log('Delete Item Error', error)
 }
 
-const updateItemSuccess = function () {
-  $('.updateModal').modal('hide')
+const updateItemSuccess = function (itemId) {
+  $(`[data-id="modal${itemId}"]`).modal('hide')
+  $('.modal-backdrop').remove()
   $('.update-form')[0].reset()
+  // $('.modal-open').overflow('scroll')
   console.log('you have succesfully updated an item!')
 }
 const updateItemError = function (error) {

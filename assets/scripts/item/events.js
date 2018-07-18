@@ -30,15 +30,20 @@ const onUpdateItem = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   const itemId = $(event.target).attr('data-id')
-  console.log('update id: ', itemId)
   itemApi.updateItem(data, itemId)
-    .then(itemUi.updateItemSuccess)
+    .then(() => itemUi.updateItemSuccess(itemId))
     .then(onGetItems)
     .catch(itemUi.updateItemError)
 }
 
+const onOpenUpdateModal = function (event) {
+  const itemId = $(event.target).attr('data-id')
+  $(`[data-id="modal${itemId}"]`).modal('show')
+}
+
 const addHandlers = () => {
   $('#inventoryList').on('click', '.deleteButton', onDeleteItem)
+  $('#inventoryList').on('click', '.updateButton', onOpenUpdateModal)
   $('#inventoryList').on('submit', '.update-form', onUpdateItem)
 }
 

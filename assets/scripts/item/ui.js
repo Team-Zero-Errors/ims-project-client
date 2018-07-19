@@ -1,6 +1,5 @@
 'use strict'
 const store = require('../store')
-
 const showItemsTemplate = require('../templates/item-listing.handlebars')
 
 const createItemSuccess = function (data) {
@@ -14,9 +13,9 @@ const createItemError = function () {
 }
 
 const getItemsSuccess = (data) => {
-  const yourItems = data.items.filter((data) => {
-    if (data.owner === store.user._id) {
-      return data
+  const yourItems = data.items.filter((item) => {
+    if (item.owner === store.user._id) {
+      return item
     }
   })
   const showNewItemsHtml = showItemsTemplate({ items: yourItems })
@@ -39,13 +38,13 @@ const updateItemSuccess = function (itemId) {
   $('.update-form')[0].reset()
 }
 const updateItemError = function () {
-  $('.modal-title').css('color', 'red')
-  $('.modal-title').html('Something went wrong creating item try again!')
+  $('.itemUpdateTitle').css('color', 'red')
+  $('.itemUpdateTitle').html('Something went wrong creating item try again!')
 }
 
 const resetUiHandleing = function () {
-  $('.modal-title').css('color', 'black')
-  $('.modal-title').html('Update Item')
+  $('.itemUpdateTitle').css('color', 'black')
+  $('.itemUpdateTitle').html('Update Item')
   $('#itemTitle').css('color', 'white')
   $('#itemTitle').html('Item Inventory')
   $('#createModalLabel').css('color', 'black')

@@ -2,6 +2,13 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Bungee');
 
+body {
+  background-image: url('./nozamalogo.png');
+  background-repeat: no-repeat;
+  background-position: 0 75px;
+  background-size: 100%;
+}
+
 footer {
   background-color: grey;
   bottom: 0;
@@ -22,6 +29,7 @@ h3 {
 
 .navbar {
   opacity: 0.9;
+  background-color: #146eb4;
 }
 
 .view2 {
@@ -68,11 +76,14 @@ h3 {
 
 #menu-title {
   display: inline;
-  font-size: 50px;
+  color: #000;
   font-family: 'Bungee', cursive;
+  font-size: 50px;
 }
+
 #sub-menu-title {
   display: inline;
-  font-size: 25px;
+  color: #f90;
   font-family: 'Bungee', cursive;
+  font-size: 25px;
 }

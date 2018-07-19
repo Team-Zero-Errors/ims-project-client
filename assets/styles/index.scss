@@ -1,5 +1,6 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Bungee');
 
 footer {
   background-color: grey;
@@ -67,5 +68,11 @@ h3 {
 
 #menu-title {
   display: inline;
-  font-size: 40px;
+  font-size: 50px;
+  font-family: 'Bungee', cursive;
+}
+#sub-menu-title {
+  display: inline;
+  font-size: 25px;
+  font-family: 'Bungee', cursive;
 }

@@ -7,6 +7,7 @@
 // require('./example')
 const authEvents = require('./auth/events')
 const itemEvents = require('./item/events')
+const itemUi = require('./item/ui')
 
 $(() => {
   // Authentication Event Handler
@@ -18,10 +19,9 @@ $(() => {
   // Item Events
   $('#create-item-form').on('submit', itemEvents.onCreateItem)
 
+  // Handlebar Event Handlers
   itemEvents.addHandlers()
-  // $('.deleteButton').on('click', itemEvents.onDeleteItem)
-  // $('.update-submit-button').on('submit', itemEvents.onUpdateItem)
-  // $('#show-posts').on('click', '.deleteButton', onDeletePost)
-  // $('#show-posts').on('submit', '.update-form', onUpdatePost)
-  // $('#create-post-form').on('submit', onNewPost)
+
+  // Reset UI Handling Elements
+  $('.content-button').on('click', itemUi.resetUiHandleing)
 })

@@ -1,5 +1,6 @@
 'use strict'
 const store = require('../store')
+const itemUi = require('../item/ui')
 
 const signUpSuccess = function (signUpResponse) {
   $('#signUpModalLabel').html('You are Signed Up! Now you can Sign In! ', signUpResponse)
@@ -42,7 +43,6 @@ const changePasswordError = function () {
 }
 
 const signOutSuccess = function (response) {
-  $('#signOutModal').modal('hide')
   $('#sign-out-text').html('You Have Successfully Signed Out')
   $('#sign-out-text').css('color', 'black')
   $('#signUpModalLabel').html('Sign Up')
@@ -53,6 +53,7 @@ const signOutSuccess = function (response) {
   $('#changePasswordModalLabel').css('color', 'black')
   $('.view1').css('display', 'block')
   $('.view2').css('display', 'none')
+  itemUi.resetUiHandleing()
   delete store.user
 }
 

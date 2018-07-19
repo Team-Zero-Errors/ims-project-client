@@ -12,6 +12,7 @@ const onCreateItem = function (event) {
     .catch(itemUi.createItemError)
 }
 const onGetItems = () => {
+  itemUi.resetUiHandleing()
   itemApi.getItems()
     .then(itemUi.getItemsSuccess)
     .catch(itemUi.getItemsFailure)
@@ -19,9 +20,9 @@ const onGetItems = () => {
 
 const onDeleteItem = function (event) {
   event.preventDefault()
+  itemUi.resetUiHandleing()
   const itemId = $(event.target).attr('data-id')
   itemApi.deleteItem(itemId)
-    .then(itemUi.deleteItemSuccess)
     .then(onGetItems)
     .catch(itemUi.deleteItemError)
 }
@@ -37,6 +38,7 @@ const onUpdateItem = function (event) {
 }
 
 const onOpenUpdateModal = function (event) {
+  itemUi.resetUiHandleing()
   const itemId = $(event.target).attr('data-id')
   $(`[data-id="modal${itemId}"]`).modal('show')
 }

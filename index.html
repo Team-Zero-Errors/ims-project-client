@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>IMS</title>
+      <title>NOZAMA</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -14,9 +14,8 @@
     <body>
       <nav class="navbar navbar-dark bg-primary">
         <div class="container">
-          <p id='menu-title'>NOZAMA <br> </p>
-            <p id='sub-menu-title'> Inventory Management System
-          </p>
+          <p id='menu-title'>NOZAMA<br></p>
+          <p id='sub-menu-title'>Inventory Management System</p>
           <button type="button" class="btn btn-primary menu view1" data-toggle="modal" data-target="#signUpModal">
           Sign Up
           </button>
@@ -35,18 +34,18 @@
       <div class="row article settings1 view2">
         <div class="row article settings2">
           <div class='col-md-1 box'></div>
-          <div class='col-md-2 box'><h3 id='itemTitle'>Item Inventory</h3></div>
-          <div class='col-md-7 box'></div>
+          <div class='col-md-6 box'><h3 id='itemTitle'>Item Inventory</h3></div>
+          <div class='col-md-3 box'></div>
           <div class='col-md-1 box'>
-            <button type="button"  class="btn btn-primary content-button" data-toggle="modal" data-target="#createItemModal">Create Item</button>
-      </div>
-
+            <button type="button"  class="btn btn-primary content-button" data-toggle="modal" data-target="#createItemModal">
+            Create Item
+            </button>
+          </div>
           <div class='col-md-1 box'></div>
         </div>
         <div class="row article settings3">
           <div class='col-md-1 box'></div>
-          <div id='inventoryList' class='col-md-8 box'>
-          </div>
+          <div id='inventoryList' class='col-md-8 box'></div>
           <div class='col-md-3 box'></div>
         </div>
       </div>
@@ -60,9 +59,7 @@
               </button>
             </div>
             <div class="modal-body">
-
               <h4 id='sign-out-text'></h4>
-
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -80,7 +77,6 @@
               </button>
             </div>
             <div class="modal-body">
-
               <form id='change-password-form'>
                 <div class="form-group">
                   <label for="changePasswordInputPassword1">Old Password</label>
@@ -92,7 +88,6 @@
                 </div>
                 <button type='submit'>Change Password</button>
               </form>
-
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -110,7 +105,6 @@
               </button>
             </div>
             <div class="modal-body">
-
               <form id='sign-up-form'>
                 <div class="form-group">
                   <label for="signUpInputEmail1">Email Address</label>
@@ -126,7 +120,6 @@
                 </div>
                 <button type='submit'>Sign-Up</button>
               </form>
-
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -144,7 +137,6 @@
               </button>
             </div>
             <div class="modal-body">
-
               <form id='sign-in-form'>
                 <div class="form-group">
                   <label for="signInInputEmail1">Email Address</label>
@@ -156,7 +148,6 @@
                 </div>
                 <button type='submit'>Sign-In</button>
               </form>
-
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" id="close-sign-up" data-dismiss="modal">Close</button>
@@ -181,12 +172,12 @@
                   <input name = "item[name]" placeholder="Item Name" type="text"  class="form-control">
                 </div>
                 <div class="form-group">
-                  <label for="formGroupExampleInput">Price</label>
-                  <input name ="item[price]" placeholder="Price" type="text" class="form-control">
-                </div>
-                <div class="form-group">
                   <label for="formGroupExampleInput2">Quantity</label>
                   <input  name ="item[quantity]" class="form-control" type="text" placeholder="Quantity">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Price</label>
+                  <input name ="item[price]" placeholder="Price" type="text" class="form-control">
                 </div>
                 <button type="submit" id="create-post-submit-button" class="create-submit-button btn btn-primary">Create</button>
                 </form>
@@ -197,7 +188,7 @@
           </div>
         </div>
       </div>
-       <br><br>
+      <br><br>
 
       <footer>
         <p>Created by Team-Zero-Errors</p>

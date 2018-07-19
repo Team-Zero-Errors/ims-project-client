@@ -14,10 +14,10 @@ const createItem = function (data) {
   })
 }
 
-const updateItem = function (data, id) {
+const updateItem = function (data, itemId) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + '/items/' + id,
+    url: config.apiUrl + '/items/' + itemId,
     data: data,
     headers: {
       Authorization: 'Token token=' + store.user.token

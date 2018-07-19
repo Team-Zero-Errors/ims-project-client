@@ -1,6 +1,5 @@
 'use strict'
 const store = require('../store')
-
 const showItemsTemplate = require('../templates/item-listing.handlebars')
 
 const createItemSuccess = function (data) {
@@ -14,9 +13,9 @@ const createItemError = function () {
 }
 
 const getItemsSuccess = (data) => {
-  const yourItems = data.items.filter((data) => {
-    if (data.owner === store.user._id) {
-      return data
+  const yourItems = data.items.filter((item) => {
+    if (item.owner === store.user._id) {
+      return item
     }
   })
   const showNewItemsHtml = showItemsTemplate({ items: yourItems })

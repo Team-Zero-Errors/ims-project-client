@@ -11,6 +11,7 @@ const onCreateItem = function (event) {
     .then(onGetItems)
     .catch(itemUi.createItemError)
 }
+
 const onGetItems = () => {
   itemUi.resetUiHandleing()
   itemApi.getItems()

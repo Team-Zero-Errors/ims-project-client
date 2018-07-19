@@ -28,9 +28,6 @@ const getItemsFailure = function () {
   $('#itemTitle').html('Something went wrong loading items try again!')
 }
 
-const deleteItemSuccess = function () {
-  console.log('you have succesfully deleted an item!')
-}
 const deleteItemError = function () {
   $('#itemTitle').css('color', 'red')
   $('#itemTitle').html('Something went wrong deleting item try again!')
@@ -58,7 +55,6 @@ const resetUiHandleing = function () {
 module.exports = {
   createItemSuccess,
   createItemError,
-  deleteItemSuccess,
   deleteItemError,
   getItemsSuccess,
   getItemsFailure,

@@ -23,7 +23,6 @@ const onDeleteItem = function (event) {
   itemUi.resetUiHandleing()
   const itemId = $(event.target).attr('data-id')
   itemApi.deleteItem(itemId)
-    .then(itemUi.deleteItemSuccess)
     .then(onGetItems)
     .catch(itemUi.deleteItemError)
 }

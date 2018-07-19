@@ -49,6 +49,8 @@ const resetUiHandleing = function () {
   $('#itemTitle').html('Item Inventory')
   $('#createModalLabel').css('color', 'black')
   $('#createModalLabel').html('Create Item')
+  $('.update-form')[0].reset()
+  $('#create-item-form')[0].reset()
 }
 
 module.exports = {

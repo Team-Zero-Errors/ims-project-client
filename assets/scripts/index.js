@@ -8,6 +8,7 @@
 const authEvents = require('./auth/events')
 const itemEvents = require('./item/events')
 const itemUi = require('./item/ui')
+const authUi = require('./auth/ui')
 
 $(() => {
   // Authentication Event Handler
@@ -24,4 +25,5 @@ $(() => {
 
   // Reset UI Handling Elements
   $('.content-button').on('click', itemUi.resetUiHandleing)
+  $('.menu').on('click', authUi.resetAuth)
 })
